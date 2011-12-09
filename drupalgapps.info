@@ -2,3 +2,7 @@ name = DrupalGapps
 description = Google Apps framework for Drupal
 core = 7.x
 package = DrupalGapps
+
+dependencies[] = http_client
+
+files[] = includes/GoogleAppsClientLoginToken.inc
