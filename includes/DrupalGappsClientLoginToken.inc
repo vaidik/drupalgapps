@@ -39,11 +39,10 @@ class DrupalGappsClientLoginToken {
 			foreach ($response_lines as $line) {
 				if (preg_match('/^Auth=(.+)$/', $line, $matches)) {
 					$auth_token = $matches[1];
+					$this->setToken($auth_token);
 					break;
 				}
 			}
-
-			$this->setToken($auth_token);
 		}
 	}
 

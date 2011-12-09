@@ -1,6 +1,7 @@
 <?php
 
 abstract class DrupalGappsRequest {
+	//Only the string.
 	private $token;
 
 	function __construct($token) {
@@ -49,7 +50,7 @@ class DrupalGappsClientLoginRequest extends DrupalGappsRequest {
 	function execute($url, array $options = array('method' => 'GET', 'parameters' => array(), 'headers' => array()), $data = NULL) {
 
 		$options['headers'] += array(
-			'Authorization' => 'GoogleLogin auth=' . parent::getToken()->getToken(),
+			'Authorization' => 'GoogleLogin auth=' . parent::getToken(),
 			'GData-Version' => '3.0',
 		);
 
