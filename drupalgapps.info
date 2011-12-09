@@ -6,4 +6,5 @@ package = DrupalGapps
 dependencies[] = http_client
 
 files[] = includes/DrupalGappsClientLoginToken.inc
+files[] = includes/DrupalGappsOAuthToken.inc
 files[] = includes/DrupalGappsRequest.inc
