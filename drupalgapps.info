@@ -5,4 +5,5 @@ package = DrupalGapps
 
 dependencies[] = http_client
 
-files[] = includes/GoogleAppsClientLoginToken.inc
+files[] = includes/DrupalGappsClientLoginToken.inc
+files[] = includes/DrupalGappsRequest.inc

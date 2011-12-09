@@ -40,3 +40,19 @@ abstract class DrupalGappsRequest {
 		return $response;
 	}
 }
+
+class DrupalGappsClientLoginRequest extends DrupalGappsRequest {
+	function prepareClient() {
+		$this->http_client = new HttpClient();
+	}
+
+	function execute($url, array $options = array('method' => 'GET', 'parameters' => array(), 'headers' => array()), $data = NULL) {
+
+		$options['headers'] += array(
+			'Authorization' => 'GoogleLogin auth=' . parent::getToken()->getToken(),
+			'GData-Version' => '3.0',
+		);
+
+		return parent::execute($url, $options, $data);
+	}
+}
